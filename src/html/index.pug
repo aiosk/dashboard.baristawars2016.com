@@ -1,0 +1,26 @@
+extends _layout/_master.pug
+block body-script-src
+    script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
+
+block body
+    header
+    main
+        .row
+            .col.s6
+                .card
+                    .card-content
+                        .card-title Login
+                        form(method='POST' action=`${urlBase}/login`)
+                            .row
+                                .col.s6.input-field
+                                    input.validate(type='text' placeholder='username' id='username')
+                                    label(for='username') Username
+                            .row
+                                .col.s6.input-field
+                                    input.validate(type='password' placeholder='username' id='password')
+                                    label(for='password') Password
+
+                    .card-action
+                        button.btn.waves-effect.waves-light(type='submit') submit
+                            i.material-icons.right send
+    footer
