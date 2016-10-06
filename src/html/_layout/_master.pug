@@ -3,14 +3,16 @@ html.no-js(lang='')
     head
         meta(charset='utf-8')
         meta(http-equiv='x-ua-compatible', content='ie=edge')
-        title Barista Wars 2016
+        -title = ''
+        block title
+        title= `${title} - Barista Wars 2016`
         meta(name='description', content='Barista Wars 2016')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel='apple-touch-icon', href='apple-touch-icon.png')
         //link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css')
         link(rel='stylesheet', type='text/css', href='css/main.css',media="screen,projection")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
-        block body-css
+        block css
         link(rel='stylesheet', href='css/main.css')
     body
         block master-ie8
@@ -21,9 +23,12 @@ html.no-js(lang='')
         block master-js
             script(src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js')
             script(src='https://code.jquery.com/jquery-3.1.0.min.js')
-            block body-script-src
-            script(src='js/main.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
+            script(src='https://unpkg.com/axios/dist/axios.min.js')
+            script(src='https://unpkg.com/vue@2.0.1/dist/vue.min.js')
             block body-js
-                script
-                    block body-script
+
+            script(src='js/main.js')
+            script
+                block body-script
 

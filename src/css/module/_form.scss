@@ -1,0 +1,19 @@
+#formLogin {
+
+    .card {
+        @include absolute-center;
+        //@extend .z-depth-1;
+        width: 50vw;
+        min-width: 300px;
+        max-width: 400px;
+    }
+    .input-field .material-icons {
+        margin-top: 20px;
+    }
+    .input-field label.active {
+        height: 1.5rem;
+    }
+    .row, .col {
+        //margin: 0;
+    }
+}

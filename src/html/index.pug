@@ -1,26 +1,51 @@
 extends _layout/_master.pug
-block body-script-src
-    script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
+include _base/_mixin.pug
+
+block title
+    - title='Dashboard'
+
+block css
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+
+block body-js
+    //script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
 
 block body
-    header
-    main
-        .row
-            .col.s6
-                .card
-                    .card-content
-                        .card-title Login
-                        form(method='POST' action=`${urlBase}/login`)
-                            .row
-                                .col.s6.input-field
-                                    input.validate(type='text' placeholder='username' id='username')
-                                    label(for='username') Username
-                            .row
-                                .col.s6.input-field
-                                    input.validate(type='password' placeholder='username' id='password')
-                                    label(for='password') Password
+    main#app
+        .row(v-if='isLogin')
+            .col.s12.m6
+                form#formLogin(v-bind:method='form.method' v-bind:action='form.href' v-on:submit.prevent='onLogin')
+                    .card
+                        .card-content
+                            .card-title Login
+                                .row
+                                    .col.s12.input-field
+                                        i.material-icons.prefix account_box
+                                        input#username.validate(type='text' v-model="form.username")
+                                        label(for='username') Username
+                                .row
+                                    .col.s12.input-field
+                                        i.material-icons.prefix account_box
+                                        input#password.validate(type='password' v-model="form.password")
+                                        label(for='password') Password
 
-                    .card-action
-                        button.btn.waves-effect.waves-light(type='submit') submit
-                            i.material-icons.right send
-    footer
+                        .card-action
+                            button.btn.waves-effect.waves-light(type='submit') login
+                                i.material-icons.right send
+        .row(v-else)
+            header
+            main
+                .row
+                    .col.s12
+                        .card
+                            .card-content a
+                    .col.s12.m4
+                        .card
+                            .card-content b
+                    .col.s12.m4
+                        .card
+                            .card-content c
+                    .col.s12.m4
+                        .card
+                            .card-content d
+            footer
