@@ -1,7 +1,7 @@
 {
   "port": 8600,
   "files": [
-    "./dist/**/*.{html,js}"
+    "./dist/**/*.{html,js,css}"
   ],
   "server": {
     "baseDir": "./dist"
