@@ -1,2 +1,2 @@
-const isProduction = false;
-const urlBase = `http://${isProduction ? 'api.baristawars2016.com' : '192.168.2.50:8080'}`;
+const isProduction = true;
+const urlBase = `http://${isProduction ? 'api.baristawars2016.com/public' : '192.168.2.50:8080'}`;

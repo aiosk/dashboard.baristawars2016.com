@@ -1,7 +1,7 @@
 'use strict';
 
-var isProduction = false;
-var urlBase = 'http://' + (isProduction ? 'api.baristawars2016.com' : '192.168.2.50:8080');
+var isProduction = true;
+var urlBase = 'http://' + (isProduction ? 'api.baristawars2016.com/public' : '192.168.2.50:8080');
 
 var app = new Vue({
     el: '#app',
