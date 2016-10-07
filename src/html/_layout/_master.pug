@@ -7,7 +7,8 @@ html.no-js(lang='')
         block title
         title= `${title} - Barista Wars 2016`
         meta(name='description', content='Barista Wars 2016')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        //meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
         link(rel='apple-touch-icon', href='apple-touch-icon.png')
         //link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css')
         link(rel='stylesheet', type='text/css', href='css/main.css',media="screen,projection")
@@ -25,7 +26,7 @@ html.no-js(lang='')
             script(src='https://code.jquery.com/jquery-3.1.0.min.js')
             script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
             script(src='https://unpkg.com/axios/dist/axios.min.js')
-            script(src='https://unpkg.com/vue@2.0.1/dist/vue.min.js')
+            script(src='https://unpkg.com/vue@2.0.1/dist/vue.js')
             block body-js
 
             script(src='js/main.js')

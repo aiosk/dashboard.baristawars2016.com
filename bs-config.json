@@ -1,9 +1,14 @@
 {
-  "port": 8600,
-  "files": [
-    "./dist/**/*.{html,js,css}"
-  ],
-  "server": {
-    "baseDir": "./dist"
-  }
+    "port": 8600,
+    "files": [
+        "./dist/**/*.{html,js,css}"
+    ],
+    "server": {
+        "baseDir": "./dist"
+    },
+    "reloadDelay": 200,
+    "reloadOnRestart": true,
+    "host": "192.168.2.50",
+    "logLevel": "warn",
+    "open": false
 }

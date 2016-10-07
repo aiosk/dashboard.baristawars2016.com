@@ -9,31 +9,35 @@ block css
 
 block body-js
     //script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
+    //script(src='https://cdn.auth0.com/js/lock/10.2/lock.min.js')
 
 block body
-    main#app
-        .row(v-if='isLogin')
-            .col.s12.m6
-                form#formLogin(v-bind:method='form.method' v-bind:action='form.href' v-on:submit.prevent='onLogin')
-                    .card
-                        .card-content
-                            .card-title Login
-                                .row
-                                    .col.s12.input-field
-                                        i.material-icons.prefix account_box
-                                        input#username.validate(type='text' v-model="form.username")
-                                        label(for='username') Username
-                                .row
-                                    .col.s12.input-field
-                                        i.material-icons.prefix account_box
-                                        input#password.validate(type='password' v-model="form.password")
-                                        label(for='password') Password
+    .spinner
+        + spinner
+    .row#app.hide
+        .col.s12.m6(v-if='isGuest')
+            form#formLogin(':method'='form.method' ':action'='form.href' @submit.prevent='onLogin')
+                .card
+                    .card-content
+                        .card-title Login
+                            .row
+                                .col.s12.input-field
+                                    i.material-icons.prefix account_box
+                                    input#username.validate(type='text' v-model.trim="credentials.username")
+                                    label(for='username') Username
+                            .row
+                                .col.s12.input-field
+                                    i.material-icons.prefix account_box
+                                    input#password.validate(type='password' v-model.trim="credentials.password")
+                                    label(for='password') Password
 
-                        .card-action
-                            button.btn.waves-effect.waves-light(type='submit') login
-                                i.material-icons.right send
-        .row(v-else)
+                    .card-action
+                        button.btn.waves-effect.waves-light(type='submit') login
+                            i.material-icons.right send
+        .col.s12(v-else)
             header
+                a(href='#' @click.stop='onLogout')
+                    i.material-icons.prefix account_box
             main
                 .row
                     .col.s12

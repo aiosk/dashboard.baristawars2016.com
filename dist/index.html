@@ -5,7 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dashboard - Barista Wars 2016</title>
     <meta name="description" content="Barista Wars 2016">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta(name='viewport', content='width=device-width, initial-scale=1.0')-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!--link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css')-->
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen,projection">
@@ -18,36 +19,82 @@
     
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'> upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <main id="app">
-      <div class="row" v-if="isLogin">
-        <div class="col s12 m6">
-          <form id="formLogin" v-bind:method="form.method" v-bind:action="form.href" v-on:submit.prevent="onLogin">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-title">Login
-                  <div class="row">
-                    <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
-                      <input class="validate" id="username" type="text" v-model="form.username">
-                      <label for="username">Username</label>
-                    </div>
+    <div class="spinner">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row hide" id="app">
+      <div class="col s12 m6" v-if="isGuest">
+        <form id="formLogin" :method="form.method" :action="form.href" @submit.prevent="onLogin">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-title">Login
+                <div class="row">
+                  <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
+                    <input class="validate" id="username" type="text" v-model.trim="credentials.username">
+                    <label for="username">Username</label>
                   </div>
-                  <div class="row">
-                    <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
-                      <input class="validate" id="password" type="password" v-model="form.password">
-                      <label for="password">Password</label>
-                    </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
+                    <input class="validate" id="password" type="password" v-model.trim="credentials.password">
+                    <label for="password">Password</label>
                   </div>
                 </div>
               </div>
-              <div class="card-action">
-                <button class="btn waves-effect waves-light" type="submit">login<i class="material-icons right">send</i></button>
-              </div>
             </div>
-          </form>
-        </div>
+            <div class="card-action">
+              <button class="btn waves-effect waves-light" type="submit">login<i class="material-icons right">send</i></button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="row" v-else>
-        <header></header>
+      <div class="col s12" v-else>
+        <header><a href="#" @click.stop="onLogout"><i class="material-icons prefix">account_box</i></a></header>
         <main>
           <div class="row">
             <div class="col s12">
@@ -74,13 +121,14 @@
         </main>
         <footer></footer>
       </div>
-    </main>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/vue@2.0.1/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@2.0.1/dist/vue.js"></script>
     <!--script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')-->
+    <!--script(src='https://cdn.auth0.com/js/lock/10.2/lock.min.js')-->
     <script src="js/main.js"></script>
     <script>
     </script>
