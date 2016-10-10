@@ -101,14 +101,15 @@
           </div>
         </form>
       </div>
-      <div class="col s12" v-else>
+      <div class="col s12" v-else style="padding:0">
         <header class="clearfix right-align">
-          <div class="profile left">Welcome, {{profileName}}</div>
-          <div class="menu right">
-            <ul>
-              <li><a href="#" @click.stop="onLogout" style="display:block;height:24px;line-height:24px"><i class="material-icons">lock</i>logout</a></li>
-            </ul>
-          </div>
+          <nav>
+            <div class="nav-wrapper"><a class="brand-logo" href="#!">Welcome, {{profileName}}</a>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="logout" href="#" @click.stop="onLogout"><i class="material-icons">directions_run</i></a></li>
+              </ul>
+            </div>
+          </nav>
         </header>
         <main class="clearfix">
           <div class="row">
@@ -116,7 +117,56 @@
               <div class="card card--gender">
                 <div class="card-content">
                   <div class="card-title">Gender</div>
-                  <div class="chart" id="genderChart"></div>
+                  <div class="chart" id="genderChart">
+                    <div class="spinner">
+                      <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,7 +174,56 @@
               <div class="card card--position">
                 <div class="card-content">
                   <div class="card-title">Position</div>
-                  <div class="chart" id="positionChart"></div>
+                  <div class="chart" id="positionChart">
+                    <div class="spinner">
+                      <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -132,7 +231,56 @@
               <div class="card card--maps">
                 <div class="card-content">
                   <div class="card-title">Maps</div>
-                  <div class="chart"></div>
+                  <div class="chart">
+                    <div class="spinner">
+                      <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

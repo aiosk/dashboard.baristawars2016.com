@@ -40,15 +40,16 @@ block body
                     .card-action
                         button.btn.waves-effect.waves-light(type='submit') login
                             i.material-icons.right send
-        .col.s12(v-else)
+        .col.s12(v-else style={'padding':0})
             header.clearfix.right-align
-                .profile.left Welcome, {{profileName}}
-                .menu.right
-                    ul
-                        li
-                            a(href='#' @click.stop='onLogout' style={'display':"block",'height':'24px','line-height':'24px'})
-                                i.material-icons lock
-                                |logout
+                nav
+                    .nav-wrapper
+                        a.brand-logo(href='#!') Welcome, {{profileName}}
+                        ul.right.hide-on-med-and-down
+                            li
+                                a(href='#' @click.stop='onLogout').logout
+                                    i.material-icons directions_run
+
             main.clearfix
                 .row
                     .col.s12.m6
@@ -56,14 +57,20 @@ block body
                             .card-content
                                 .card-title Gender
                                 .chart#genderChart
+                                    .spinner
+                                        + spinner
                     .col.s12.m6
                         .card.card--position
                             .card-content
                                 .card-title Position
                                 .chart#positionChart
+                                    .spinner
+                                        + spinner
                     .col.s12
                         .card.card--maps
                             .card-content
                                 .card-title Maps
                                 .chart
+                                    .spinner
+                                        + spinner
             footer

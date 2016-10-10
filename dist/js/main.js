@@ -18,7 +18,7 @@ var app = new Vue({
         }
     },
     mounted: function mounted() {
-        $('.spinner').addClass('hide');
+        $('body > .spinner').addClass('hide');
         $('#app.hide').removeClass('hide');
 
         var elGender = $('.card--gender');
