@@ -1,0 +1,77 @@
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+    // Form Message Shared Styles
+    & + label:after {
+        top: 3rem;
+    }
+
+    &:focus + label:after {
+        top: 5rem;
+    }
+}
+
+//.input-field.col label {
+//    left: 0
+//}
+
+div.validate {
+    @extend input:not([type]);
+
+    // Valid Input Style
+    &.valid,
+    &:focus.valid {
+        border-bottom: 1px solid $input-success-color;
+        box-shadow: 0 1px 0 0 $input-success-color;
+    }
+
+    // Custom Success Message
+    &.valid + label:after,
+    &:focus.valid + label:after {
+        content: attr(data-success);
+        color: $input-success-color;
+        opacity: 1;
+    }
+
+    // Invalid Input Style
+    &.invalid,
+    &:focus.invalid {
+        border-bottom: $input-invalid-border;
+        box-shadow: 0 1px 0 0 $input-error-color;
+    }
+
+    // Custom Error message
+    &.invalid + label:after,
+    &:focus.invalid + label:after {
+        content: attr(data-error);
+        color: $input-error-color;
+        opacity: 1;
+    }
+
+    // Full width label when using validate for error messages
+    &.validate + label {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    // Form Message Shared Styles
+    & + label:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: .2s opacity ease-out, .2s color ease-out;
+    }
+}

@@ -68,22 +68,30 @@
       </div>
     </div>
     <div class="row hide" id="app">
-      <div class="col s12 m6" v-if="isGuest">
+      <div class="col s12 m6" v-if="isGuest()">
+        <div class="progress hide" style="margin:0">
+          <div class="indeterminate"></div>
+        </div>
         <form id="formLogin" :method="form.method" :action="form.href" @submit.prevent="onLogin">
           <div class="card">
             <div class="card-content">
-              <div class="card-title">Login
-                <div class="row">
-                  <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
-                    <input class="validate" id="username" type="text" v-model.trim="credentials.username">
-                    <label for="username">Username</label>
-                  </div>
+              <div class="card-title">Login</div>
+              <div class="row">
+                <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
+                  <input class="validate" id="username" name="username" type="text" v-model.trim="credentials.username">
+                  <label for="username">Username</label>
                 </div>
-                <div class="row">
-                  <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
-                    <input class="validate" id="password" type="password" v-model.trim="credentials.password">
-                    <label for="password">Password</label>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col s12 input-field"><i class="material-icons prefix">account_box</i>
+                  <input class="validate" id="password" name="password" type="password" v-model.trim="credentials.password">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <div class="row hide">
+                <div class="col s12 input-field">
+                  <div class="validate"></div>
+                  <label data-error="a"></label>
                 </div>
               </div>
             </div>
@@ -94,27 +102,38 @@
         </form>
       </div>
       <div class="col s12" v-else>
-        <header><a href="#" @click.stop="onLogout"><i class="material-icons prefix">account_box</i></a></header>
-        <main>
+        <header class="clearfix right-align">
+          <div class="profile left">Welcome, {{profileName}}</div>
+          <div class="menu right">
+            <ul>
+              <li><a href="#" @click.stop="onLogout" style="display:block;height:24px;line-height:24px"><i class="material-icons">lock</i>logout</a></li>
+            </ul>
+          </div>
+        </header>
+        <main class="clearfix">
           <div class="row">
+            <div class="col s12 m6">
+              <div class="card card--gender">
+                <div class="card-content">
+                  <div class="card-title">Gender</div>
+                  <div class="chart" id="genderChart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="card card--position">
+                <div class="card-content">
+                  <div class="card-title">Position</div>
+                  <div class="chart" id="positionChart"></div>
+                </div>
+              </div>
+            </div>
             <div class="col s12">
-              <div class="card">
-                <div class="card-content">a</div>
-              </div>
-            </div>
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content">b</div>
-              </div>
-            </div>
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content">c</div>
-              </div>
-            </div>
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content">d</div>
+              <div class="card card--maps">
+                <div class="card-content">
+                  <div class="card-title">Maps</div>
+                  <div class="chart"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -129,6 +148,7 @@
     <script src="https://unpkg.com/vue@2.0.1/dist/vue.js"></script>
     <!--script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')-->
     <!--script(src='https://cdn.auth0.com/js/lock/10.2/lock.min.js')-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/main.js"></script>
     <script>
     </script>

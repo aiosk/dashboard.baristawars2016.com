@@ -10,46 +10,60 @@ block css
 block body-js
     //script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')
     //script(src='https://cdn.auth0.com/js/lock/10.2/lock.min.js')
+    script(src='https://www.gstatic.com/charts/loader.js')
 
 block body
     .spinner
         + spinner
     .row#app.hide
-        .col.s12.m6(v-if='isGuest')
+        .col.s12.m6(v-if='isGuest()')
+            .progress(style={'margin': 0}).hide
+                .indeterminate
             form#formLogin(':method'='form.method' ':action'='form.href' @submit.prevent='onLogin')
                 .card
                     .card-content
                         .card-title Login
-                            .row
-                                .col.s12.input-field
-                                    i.material-icons.prefix account_box
-                                    input#username.validate(type='text' v-model.trim="credentials.username")
-                                    label(for='username') Username
-                            .row
-                                .col.s12.input-field
-                                    i.material-icons.prefix account_box
-                                    input#password.validate(type='password' v-model.trim="credentials.password")
-                                    label(for='password') Password
-
+                        .row
+                            .col.s12.input-field
+                                i.material-icons.prefix account_box
+                                input#username.validate(name='username' type='text' v-model.trim="credentials.username")
+                                label(for='username') Username
+                        .row
+                            .col.s12.input-field
+                                i.material-icons.prefix account_box
+                                input#password.validate(name='password' type='password' v-model.trim="credentials.password")
+                                label(for='password') Password
+                        .row.hide
+                            .col.s12.input-field
+                                .validate
+                                label(data-error='a')
                     .card-action
                         button.btn.waves-effect.waves-light(type='submit') login
                             i.material-icons.right send
         .col.s12(v-else)
-            header
-                a(href='#' @click.stop='onLogout')
-                    i.material-icons.prefix account_box
-            main
+            header.clearfix.right-align
+                .profile.left Welcome, {{profileName}}
+                .menu.right
+                    ul
+                        li
+                            a(href='#' @click.stop='onLogout' style={'display':"block",'height':'24px','line-height':'24px'})
+                                i.material-icons lock
+                                |logout
+            main.clearfix
                 .row
+                    .col.s12.m6
+                        .card.card--gender
+                            .card-content
+                                .card-title Gender
+                                .chart#genderChart
+                    .col.s12.m6
+                        .card.card--position
+                            .card-content
+                                .card-title Position
+                                .chart#positionChart
                     .col.s12
-                        .card
-                            .card-content a
-                    .col.s12.m4
-                        .card
-                            .card-content b
-                    .col.s12.m4
-                        .card
-                            .card-content c
-                    .col.s12.m4
-                        .card
-                            .card-content d
+                        .card.card--maps
+                            .card-content
+                                .card-title Maps
+                                .chart
             footer
