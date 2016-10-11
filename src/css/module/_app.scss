@@ -7,3 +7,34 @@
 //    height: 24px;
 //    line-height: 24px;
 //}
+.welcome {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.brand-logo {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: {
+        image: url('../img/icon--white.png');
+        repeat: no-repeat;
+        size: contain;
+        position: center center;
+    }
+}
+
+.card--age {
+    $size: 100px;
+    .chart {
+        border-radius: 50%;
+        background: $primary-color;
+        height: $size;
+        width: $size;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        margin: 0 auto;
+        font-size: $size - ($size/1.8);
+    }
+}

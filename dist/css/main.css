@@ -1,3 +1,9 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.3
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -2116,7 +2122,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #2196F3; }
+  border-left: 5px solid #263238; }
 
 i {
   line-height: inherit; }
@@ -2155,7 +2161,7 @@ video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #2196F3; }
+    background-color: #263238; }
   .pagination li.disabled a {
     cursor: default;
     color: #999; }
@@ -2298,7 +2304,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #2196F3; }
+  background-color: #263238; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -2436,8 +2442,8 @@ td, th {
     .collection .collection-item:last-child {
       border-bottom: none; }
     .collection .collection-item.active {
-      background-color: #1E88E5;
-      color: white; }
+      background-color: #546e7a;
+      color: #f1f4f5; }
       .collection .collection-item.active .secondary-content {
         color: #fff; }
   .collection a.collection-item {
@@ -2445,7 +2451,7 @@ td, th {
     -webkit-transition: .25s;
     -moz-transition: .25s;
     transition: .25s;
-    color: #1E88E5; }
+    color: #546e7a; }
     .collection a.collection-item:not(.active):hover {
       background-color: #ddd; }
   .collection.with-header .collection-header {
@@ -2459,7 +2465,7 @@ td, th {
 
 .secondary-content {
   float: right;
-  color: #1E88E5; }
+  color: #546e7a; }
 
 .collapsible .collection {
   margin: 0;
@@ -2480,7 +2486,7 @@ span.badge {
     font-weight: 300;
     font-size: 0.8rem;
     color: #fff;
-    background-color: #1E88E5;
+    background-color: #546e7a;
     border-radius: 2px; }
   span.badge.new:after {
     content: " new"; }
@@ -2509,7 +2515,7 @@ nav ul a span.badge {
   height: 4px;
   display: block;
   width: 100%;
-  background-color: #d5e9fa;
+  background-color: #c4d0d6;
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden; }
@@ -2518,12 +2524,12 @@ nav ul a span.badge {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #1E88E5;
+    background-color: #546e7a;
     -webkit-transition: width .3s linear;
     -moz-transition: width .3s linear;
     transition: width .3s linear; }
   .progress .indeterminate {
-    background-color: #1E88E5; }
+    background-color: #546e7a; }
     .progress .indeterminate:before {
       content: '';
       position: absolute;
@@ -3113,7 +3119,7 @@ input[type=range] + .thumb {
 
 nav {
   color: #fff;
-  background-color: #2196F3;
+  background-color: #263238;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -3172,6 +3178,9 @@ nav {
         nav .brand-logo.right {
           right: 0.5rem;
           left: auto; } }
+    nav .brand-logo.left {
+      left: 0.5rem;
+      padding: 0; }
     nav .brand-logo.right {
       right: 0.5rem;
       padding: 0; }
@@ -3565,12 +3574,12 @@ small {
 .btn, .btn-large,
 .btn-flat {
   border: none;
-  border-radius: 2px;
+  border-radius: 0;
   display: inline-block;
   height: 36px;
   line-height: 36px;
   outline: 0;
-  padding: 0 2rem;
+  padding: 0.85em 1em;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
@@ -3624,7 +3633,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #1E88E5;
+  background-color: #546e7a;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -3632,7 +3641,7 @@ small {
   transition: .2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover {
-    background-color: #3594e8; }
+    background-color: #5e7c89; }
 
 .btn-floating {
   display: inline-block;
@@ -3644,7 +3653,7 @@ small {
   height: 37px;
   line-height: 37px;
   padding: 0;
-  background-color: #1E88E5;
+  background-color: #546e7a;
   border-radius: 50%;
   -webkit-transition: .3s;
   -moz-transition: .3s;
@@ -3659,7 +3668,7 @@ small {
     font-size: 1.6rem;
     line-height: 37px; }
   .btn-floating:hover {
-    background-color: #1E88E5; }
+    background-color: #546e7a; }
   .btn-floating:before {
     border-radius: 0; }
   .btn-floating.btn-large {
@@ -3842,11 +3851,11 @@ button.btn-floating {
   z-index: -1; }
 
 select:focus {
-  outline: 1px solid #f5fafe; }
+  outline: 1px solid #d9e1e5; }
 
 button:focus {
   outline: none;
-  background-color: #3092e7; }
+  background-color: #5c7986; }
 
 label {
   font-size: 0.8rem;
@@ -3885,7 +3894,7 @@ input[type=search],
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #cacaca;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -3896,9 +3905,9 @@ textarea.materialize-textarea {
   box-shadow: none;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s; }
+  -webkit-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  -moz-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
   input:not([type]):disabled, div.validate:disabled, input:not([type])[readonly="readonly"], div[readonly="readonly"].validate,
   input[type=text]:disabled,
   input[type=text][readonly="readonly"],
@@ -3966,8 +3975,8 @@ textarea.materialize-textarea {
   input[type=number]:focus:not([readonly]),
   input[type=search]:focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #1E88E5;
-    box-shadow: 0 1px 0 0 #1E88E5; }
+    border-bottom: 1px solid #546e7a;
+    box-shadow: 0 1px 0 0 #546e7a; }
   input:not([type]):focus:not([readonly]) + label, div.validate:focus:not([readonly]) + label,
   input[type=text]:focus:not([readonly]) + label,
   input[type=password]:focus:not([readonly]) + label,
@@ -3981,7 +3990,7 @@ textarea.materialize-textarea {
   input[type=number]:focus:not([readonly]) + label,
   input[type=search]:focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #1E88E5; }
+    color: #546e7a; }
   input:not([type]).valid, div.valid.validate, input:not([type]):focus.valid, div.validate:focus.valid,
   input[type=text].valid,
   input[type=text]:focus.valid,
@@ -4007,8 +4016,8 @@ textarea.materialize-textarea {
   input[type=search]:focus.valid,
   textarea.materialize-textarea.valid,
   textarea.materialize-textarea:focus.valid {
-    border-bottom: 1px solid #4CAF50;
-    box-shadow: 0 1px 0 0 #4CAF50; }
+    border-bottom: 1px solid #3adb76;
+    box-shadow: 0 1px 0 0 #3adb76; }
   input:not([type]).valid + label:after, div.valid.validate + label:after,
   input:not([type]):focus.valid + label:after, div.validate:focus.valid + label:after,
   input[type=text].valid + label:after,
@@ -4036,7 +4045,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea.valid + label:after,
   textarea.materialize-textarea:focus.valid + label:after {
     content: attr(data-success);
-    color: #4CAF50;
+    color: #3adb76;
     opacity: 1; }
   input:not([type]).invalid, div.invalid.validate, input:not([type]):focus.invalid, div.validate:focus.invalid,
   input[type=text].invalid,
@@ -4063,8 +4072,8 @@ textarea.materialize-textarea {
   input[type=search]:focus.invalid,
   textarea.materialize-textarea.invalid,
   textarea.materialize-textarea:focus.invalid {
-    border-bottom: 1px solid #F44336;
-    box-shadow: 0 1px 0 0 #F44336; }
+    border-bottom: 1px solid #ec5840;
+    box-shadow: 0 1px 0 0 #ec5840; }
   input:not([type]).invalid + label:after, div.invalid.validate + label:after,
   input:not([type]):focus.invalid + label:after, div.validate:focus.invalid + label:after,
   input[type=text].invalid + label:after,
@@ -4092,7 +4101,7 @@ textarea.materialize-textarea {
   textarea.materialize-textarea.invalid + label:after,
   textarea.materialize-textarea:focus.invalid + label:after {
     content: attr(data-error);
-    color: #F44336;
+    color: #ec5840;
     opacity: 1; }
   input:not([type]).validate + label, div.validate + label,
   input[type=text].validate + label,
@@ -4164,7 +4173,7 @@ textarea.materialize-textarea {
     -moz-transition: color .2s;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #1E88E5; }
+      color: #546e7a; }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea,
   .input-field .prefix ~ label,
@@ -4199,7 +4208,7 @@ textarea.materialize-textarea {
   width: -moz-calc(100% - 4rem);
   width: calc(100% - 4rem); }
   .input-field input[type=search]:focus {
-    background-color: #fff;
+    background-color: #fefefe;
     border: 0;
     box-shadow: none;
     color: #444; }
@@ -4323,11 +4332,11 @@ textarea {
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
-  border: 2px solid #1E88E5; }
+  border: 2px solid #546e7a; }
 
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-  background-color: #1E88E5;
+  background-color: #546e7a;
   z-index: 0; }
 
 [type="radio"]:checked + label:after {
@@ -4447,8 +4456,8 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #1E88E5;
-  border-bottom: 2px solid #1E88E5;
+  border-right: 2px solid #546e7a;
+  border-bottom: 2px solid #546e7a;
   -webkit-transform: rotate(40deg);
   -moz-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
@@ -4473,7 +4482,7 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #1E88E5;
+  border-right: 2px solid #546e7a;
   border-bottom: none;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -4535,8 +4544,8 @@ form p:last-child {
   height: 13px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fefefe;
+  border-bottom: 2px solid #fefefe;
   -webkit-transform: rotateZ(37deg);
   -moz-transform: rotateZ(37deg);
   -ms-transform: rotate(37deg);
@@ -4550,8 +4559,8 @@ form p:last-child {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #1E88E5;
-  background-color: #1E88E5;
+  border: 2px solid #546e7a;
+  background-color: #546e7a;
   z-index: 0; }
 
 [type="checkbox"].filled-in.tabbed:focus + label:after {
@@ -4561,8 +4570,8 @@ form p:last-child {
 
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
-  background-color: #1E88E5;
-  border-color: #1E88E5; }
+  background-color: #546e7a;
+  border-color: #546e7a; }
 
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
   background-color: transparent;
@@ -4596,9 +4605,9 @@ form p:last-child {
   width: 0;
   height: 0; }
   .switch label input[type=checkbox]:checked + .lever {
-    background-color: #a0c3e3; }
+    background-color: #a7a7a7; }
     .switch label input[type=checkbox]:checked + .lever:after {
-      background-color: #1E88E5;
+      background-color: #546e7a;
       left: 24px; }
 
 .switch label .lever {
@@ -4608,7 +4617,7 @@ form p:last-child {
   width: 40px;
   height: 15px;
   background-color: #818181;
-  border-radius: 15px;
+  border-radius: 0;
   margin-right: 10px;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
@@ -4632,7 +4641,7 @@ form p:last-child {
 
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
-  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(30, 136, 229, 0.1); }
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(84, 110, 122, 0.1); }
 
 input[type=checkbox]:not(:disabled) ~ .lever:active:after,
 input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
@@ -4654,11 +4663,11 @@ select.browser-default {
   display: block; }
 
 select {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fefefe;
   width: 100%;
   padding: 5px;
   border: 1px solid #f2f2f2;
-  border-radius: 2px;
+  border-radius: 0;
   height: 3rem; }
 
 .select-label {
@@ -4671,7 +4680,7 @@ select {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #9e9e9e;
+    border-bottom: 1px solid #cacaca;
     outline: none;
     height: 3rem;
     line-height: 3rem;
@@ -4796,7 +4805,7 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #1E88E5;
+  background-color: #546e7a;
   top: 10px;
   margin-left: -6px;
   -webkit-transform-origin: 50% 50%;
@@ -4811,7 +4820,7 @@ input[type=range] + .thumb {
     display: block;
     width: 30px;
     text-align: center;
-    color: #1E88E5;
+    color: #546e7a;
     font-size: 0;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -4820,7 +4829,7 @@ input[type=range] + .thumb {
   input[type=range] + .thumb.active {
     border-radius: 50% 50% 50% 0; }
     input[type=range] + .thumb.active .value {
-      color: #fff;
+      color: #fefefe;
       margin-left: -1px;
       margin-top: 8px;
       font-size: 10px; }
@@ -4839,7 +4848,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #1E88E5;
+  background-color: #546e7a;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   margin: -5px 0 0 0;
@@ -4865,7 +4874,7 @@ input[type=range]::-moz-range-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #1E88E5;
+  background: #546e7a;
   margin-top: -5px; }
 
 input[type=range]:-moz-focusring {
@@ -4894,7 +4903,7 @@ input[type=range]::-ms-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #1E88E5; }
+  background: #546e7a; }
 
 input[type=range]:focus::-ms-fill-lower {
   background: #888; }
@@ -4964,7 +4973,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100%;
   height: 100%;
   opacity: 0;
-  border-color: #1E88E5; }
+  border-color: #546e7a; }
 
 .spinner-blue,
 .spinner-blue-only {
@@ -5439,17 +5448,36 @@ input[type=range]:focus::-ms-fill-upper {
   to {
     opacity: 0; } }
 
-/**
- * Foundation for Sites by ZURB
- * Version 6.2.3
- * foundation.zurb.com
- * Licensed under MIT Open Source
- */
 html, body {
-  background: #e0e0e0; }
+  background: #e0e0e0;
+  height: 100%; }
 
 .menu ul {
   margin: 0; }
+
+.welcome {
+  font-weight: bold;
+  margin: 1rem 0; }
+
+.brand-logo {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icon--white.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center; }
+
+.card--age .chart {
+  border-radius: 50%;
+  background: #263238;
+  height: 100px;
+  width: 100px;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  margin: 0 auto;
+  font-size: 44.44444px; }
 
 #formLogin .card {
   position: absolute;
@@ -5464,7 +5492,7 @@ html, body {
   max-width: 400px; }
 
 #formLogin .input-field .material-icons {
-  margin-top: 20px; }
+  margin-top: 1rem; }
 
 #formLogin .input-field label.active {
   height: 1.5rem; }
@@ -5508,28 +5536,24 @@ input[type=search]:focus + label:after,
 textarea.materialize-textarea:focus + label:after {
   top: 5rem; }
 
-nav .brand-logo {
-  top: 0;
-  left: 1rem; }
-
 div.validate.valid, div.validate:focus.valid {
-  border-bottom: 1px solid #4CAF50;
-  box-shadow: 0 1px 0 0 #4CAF50; }
+  border-bottom: 1px solid #3adb76;
+  box-shadow: 0 1px 0 0 #3adb76; }
 
 div.validate.valid + label:after,
 div.validate:focus.valid + label:after {
   content: attr(data-success);
-  color: #4CAF50;
+  color: #3adb76;
   opacity: 1; }
 
 div.validate.invalid, div.validate:focus.invalid {
-  border-bottom: 1px solid #F44336;
-  box-shadow: 0 1px 0 0 #F44336; }
+  border-bottom: 1px solid #ec5840;
+  box-shadow: 0 1px 0 0 #ec5840; }
 
 div.validate.invalid + label:after,
 div.validate:focus.invalid + label:after {
   content: attr(data-error);
-  color: #F44336;
+  color: #ec5840;
   opacity: 1; }
 
 div.validate.validate + label {

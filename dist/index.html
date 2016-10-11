@@ -104,19 +104,21 @@
       <div class="col s12" v-else style="padding:0">
         <header class="clearfix right-align">
           <nav>
-            <div class="nav-wrapper"><a class="brand-logo" href="#!">Welcome, {{profileName}}</a>
-              <ul class="right hide-on-med-and-down">
-                <li><a class="logout" href="#" @click.stop="onLogout"><i class="material-icons">directions_run</i></a></li>
+            <div class="nav-wrapper">
+              <!--a.brand-logo(href='#!') Welcome, {{profileName}}--><a class="brand-logo left" href="#!"></a>
+              <ul class="right">
+                <li><a class="logout" href="#" @click.stop="onLogout"><i class="material-icons">exit_to_app</i>
+                    <!--i.material-icons power_settings_new--></a></li>
               </ul>
             </div>
           </nav>
         </header>
         <main class="clearfix">
           <div class="row">
-            <div class="col s12 m6">
+            <div class="welcome right-align">Welcome, {{profileName}}</div>
+            <div class="col s12 m4">
               <div class="card card--gender">
-                <div class="card-content">
-                  <div class="card-title">Gender</div>
+                <div class="card-content activator"><span class="card-title">Gender<i class="material-icons right">more_vert</i></span>
                   <div class="chart" id="genderChart">
                     <div class="spinner">
                       <div class="preloader-wrapper big active">
@@ -168,12 +170,69 @@
                     </div>
                   </div>
                 </div>
+                <div class="card-reveal"><span class="card-title">Export<i class="material-icons right">file_download</i></span></div>
               </div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m4">
+              <div class="card card--age">
+                <div class="card-content activator"><span class="card-title">Age<i class="material-icons right">more_vert</i></span>
+                  <div class="chart" id="ageChart">
+                    <div class="spinner">
+                      <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="gap-patch">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-reveal"><span class="card-title">Export<i class="material-icons right">file_download</i></span></div>
+              </div>
+            </div>
+            <div class="col s12 m4">
               <div class="card card--position">
-                <div class="card-content">
-                  <div class="card-title">Position</div>
+                <div class="card-content activator"><span class="card-title">Position<i class="material-icons right">more_vert</i></span>
                   <div class="chart" id="positionChart">
                     <div class="spinner">
                       <div class="preloader-wrapper big active">
@@ -225,13 +284,13 @@
                     </div>
                   </div>
                 </div>
+                <div class="card-reveal"><span class="card-title">Export<i class="material-icons right">file_download</i></span></div>
               </div>
             </div>
             <div class="col s12">
               <div class="card card--maps">
-                <div class="card-content">
-                  <div class="card-title">Maps</div>
-                  <div class="chart">
+                <div class="card-content activator"><span class="card-title">Maps<i class="material-icons right">more_vert</i></span>
+                  <div class="chart" id="mapsChart">
                     <div class="spinner">
                       <div class="preloader-wrapper big active">
                         <div class="spinner-layer spinner-blue">
@@ -282,6 +341,7 @@
                     </div>
                   </div>
                 </div>
+                <div class="card-reveal"><span class="card-title">Export<i class="material-icons right">file_download</i></span></div>
               </div>
             </div>
           </div>
@@ -293,7 +353,7 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/vue@2.0.1/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.0.1/dist/vue.min.js"></script>
     <!--script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js')-->
     <!--script(src='https://cdn.auth0.com/js/lock/10.2/lock.min.js')-->
     <script src="https://www.gstatic.com/charts/loader.js"></script>

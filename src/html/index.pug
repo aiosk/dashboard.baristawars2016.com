@@ -44,33 +44,59 @@ block body
             header.clearfix.right-align
                 nav
                     .nav-wrapper
-                        a.brand-logo(href='#!') Welcome, {{profileName}}
-                        ul.right.hide-on-med-and-down
+                        //a.brand-logo(href='#!') Welcome, {{profileName}}
+                        a.brand-logo.left(href='#!')
+                        ul.right
                             li
                                 a(href='#' @click.stop='onLogout').logout
-                                    i.material-icons directions_run
+                                    i.material-icons exit_to_app
+                                    //i.material-icons power_settings_new
 
             main.clearfix
                 .row
-                    .col.s12.m6
+                    .welcome.right-align Welcome, {{profileName}}
+                    .col.s12.m4
                         .card.card--gender
-                            .card-content
-                                .card-title Gender
+                            .card-content.activator
+                                span.card-title Gender
+                                    i.material-icons.right more_vert
                                 .chart#genderChart
                                     .spinner
                                         + spinner
-                    .col.s12.m6
+                            .card-reveal
+                                span.card-title Export
+                                    i.material-icons.right file_download
+                    .col.s12.m4
+                        .card.card--age
+                            .card-content.activator
+                                span.card-title Age
+                                    i.material-icons.right more_vert
+                                .chart#ageChart
+                                    .spinner
+                                        + spinner
+                            .card-reveal
+                                span.card-title Export
+                                    i.material-icons.right file_download
+                    .col.s12.m4
                         .card.card--position
-                            .card-content
-                                .card-title Position
+                            .card-content.activator
+                                span.card-title Position
+                                    i.material-icons.right more_vert
                                 .chart#positionChart
                                     .spinner
                                         + spinner
+                            .card-reveal
+                                span.card-title Export
+                                    i.material-icons.right file_download
                     .col.s12
                         .card.card--maps
-                            .card-content
-                                .card-title Maps
-                                .chart
+                            .card-content.activator
+                                span.card-title Maps
+                                    i.material-icons.right more_vert
+                                .chart#mapsChart
                                     .spinner
                                         + spinner
+                            .card-reveal
+                                span.card-title Export
+                                    i.material-icons.right file_download
             footer

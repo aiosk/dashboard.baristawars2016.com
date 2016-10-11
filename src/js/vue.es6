@@ -14,54 +14,17 @@ var app = new Vue({
         $('body > .spinner').addClass('hide');
         $('#app.hide').removeClass('hide');
 
-        const elGender = $('.card--gender');
-        const JwtAxios = axios.create({
-            baseURL: urlBase,
-            // timeout: 1000,
-            headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}
-        });
-        if (elGender.length > 0) {
-            JwtAxios.get('/dashboard/chart/gender/value')
-                .then((res)=> {
-                    console.log(res);
-
-                    google.charts.load('current', {'packages': ['corechart']});
-                    google.charts.setOnLoadCallback(drawChart);
-
-                    function drawChart() {
-                        // var data = google.visualization.arrayToDataTable([
-                        //     ['Task', 'Hours per Day'],
-                        //     ['Work',     11],
-                        //     ['Eat',      2],
-                        //     ['Commute',  2],
-                        //     ['Watch TV', 2],
-                        //     ['Sleep',    7]
-                        // ]);
-                        const data = google.visualization.arrayToDataTable([
-                            ['gender', 'value'],
-                            ['male', res.data.male],
-                            ['female', res.data.female]
-                        ]);
-                        var options = {
-                            // title: 'My Daily Activities'
-                            title: '',
-                            // legend: 'none',
-                            // pieSliceText: 'label',
-                            slices: {1: {offset: 0.2},}
-                        };
-
-                        var chart = new google.visualization.PieChart(document.getElementById('genderChart'));
-
-                        chart.draw(data, options);
-                    }
-                })
-                .catch((err)=> {
-                })
-        }
+        chartSetter()
     },
     computed: {
         profileName(){
-            return JSON.parse(localStorage.getItem('profile')).username;
+            let username;
+            try{
+                username = JSON.parse(localStorage.getItem('profile')).username
+            }catch(e) {
+                username = 'user'
+            }
+            return username;
         }
     },
     watch: {},
