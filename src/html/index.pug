@@ -39,7 +39,7 @@ block body
                                 label(data-error='a')
                     .card-action
                         button.btn.waves-effect.waves-light(type='submit') login
-                            i.material-icons.right send
+                            i.material-icons.right.large send
         .col.s12(v-else style={'padding':0})
             header.clearfix.right-align
                 nav
@@ -99,4 +99,7 @@ block body
                             .card-reveal
                                 span.card-title Export
                                     i.material-icons.right file_download
+                    .col.s12
+                        button.btn-large.waves-effect.waves-light(@click='onDownload') download all data
+                            i.material-icons.right.large file_download
             footer

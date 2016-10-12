@@ -87,6 +87,9 @@ var app = new Vue({
                     cardValidate.addClass('invalid')
                         .siblings('label').attr('data-error', err)
                 })
+        },
+        onDownload(event){
+            console.log(event);
         }
     }
 });
