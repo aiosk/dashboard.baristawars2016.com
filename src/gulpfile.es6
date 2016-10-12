@@ -7,7 +7,7 @@ import concat from 'gulp-concat';
 import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 
-const isProduction = false;
+const isProduction = true;
 const babelOpts = {presets: ['es2015'], compact: isProduction};
 const pugOpts = { data: {}, pretty: (!isProduction), compileDebug: true };
 const sassOpts = { includePaths: [], outputStyle: isProduction ? 'compressed':'nested' };

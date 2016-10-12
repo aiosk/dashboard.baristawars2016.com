@@ -19,8 +19,8 @@ const chartSetter = ()=> {
                 function drawChart () {
                     const data = google.visualization.arrayToDataTable([
                         ['gender', 'value'],
-                        ['male', res.data.male],
-                        ['female', res.data.female]
+                        ['male', res.data.items.male],
+                        ['female', res.data.items.female]
                     ]);
                     var options = {
                         // title: 'My Daily Activities'
@@ -68,9 +68,9 @@ const chartSetter = ()=> {
                 function drawChart () {
                     const data = google.visualization.arrayToDataTable([
                         ['position', 'male', 'female'],
-                        ['barista', res.data.barista.items.male, res.data.barista.items.female],
-                        ['owner', res.data.owner.items.male, res.data.owner.items.female],
-                        ['individu', res.data.individu.items.male, res.data.individu.items.female]
+                        ['barista', res.data.items.barista.items.male, res.data.items.barista.items.female],
+                        ['owner', res.data.items.owner.items.male, res.data.items.owner.items.female],
+                        ['individu', res.data.items.individu.items.male, res.data.items.individu.items.female]
                     ]);
                     const view = new google.visualization.DataView(data);
                     view.setColumns([0, 1,
